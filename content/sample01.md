@@ -8,3 +8,7 @@ tags: ["example"]
 New content is now onlne
 
 ... and we will see ...
+
+... frestyle wworks ...
+
+... pipeline ... ?

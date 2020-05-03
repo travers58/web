@@ -6,19 +6,3 @@ tags: ["example"]
 ---
 
 My content is now online.
-
-Here is the second PR.
-
-Here is the third PR.
-
-This one should trigger a remote build ...
-
-Nope
-
-Here we got again ...
-
-Four times a charm and again ...
-
-... and and again ....
-
-Once upon a time ... we did enjoy  ....

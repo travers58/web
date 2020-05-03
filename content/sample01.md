@@ -5,4 +5,4 @@ title: "Sample 1"
 tags: ["example"]
 ---
 
-My content is now online.
+New content

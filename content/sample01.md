@@ -5,18 +5,31 @@ title: "Sample 1"
 tags: ["example"]
 ---
 
-New content is now onlne
+#### Here is the first page
 
-... and we will see ...
+----
 
-... frestyle wworks ...
+```
+# Sets the default security model of the Apache2 HTTPD server. It does
+# not allow access to the root filesystem outside of /usr/share and /var/www.
+# The former is used by web applications packaged in Debian,
+# the latter may be used for local directories served by the web server. If
+# your system is serving content from a sub-directory in /srv you must allow
+# access here, or in any related virtual host.
+<Directory />
+        Options Indexes FollowSymLinks Includes ExecCGI
+        AllowOverride All
+        Require all granted
+</Directory>
 
-... pipeline ... ?
+<Directory /usr/share>
+        AllowOverride None
+        Require all granted
+</Directory>
 
-... not yet ...
-
-... now we have mis-fire ...
-
-... try, try, again!!
-
-AND AGAIN
+<Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+</Directory>
+```

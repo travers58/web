@@ -1,6 +1,6 @@
 ---
 path: "/content/sample01/"
-date: "2016-11-07"
+date: "2020-04-08"
 title: "Sample 1"
 tags: ["example"]
 ---

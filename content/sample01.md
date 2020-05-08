@@ -41,3 +41,6 @@ tags: ["example"]
 > The third test is always the best test.
 
 > Now is the acid test.
+
+
+> here we go again the item should bind to changes made on build #10

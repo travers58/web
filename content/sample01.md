@@ -46,3 +46,5 @@ tags: ["example"]
 > here we go again the item should bind to changes made on build #10
 
 > Check to see if content pull from upstream  - look for build # 23
+
+>Ok.  The text should show up on the CDN and the smoke job is #4.

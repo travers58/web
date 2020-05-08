@@ -5,7 +5,7 @@ pipeline {
    stages {
      stage('Checkout') {
       steps {
-          build(job: "dev-test/smoke", 
+          build(job: "dev-test/master", 
           propagate: false, 
           wait: false,
            )

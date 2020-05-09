@@ -50,3 +50,5 @@ tags: ["example"]
 >Ok.  The text should show up on the CDN and the smoke job is #4.
 
 >Look for a upstream project trigger here job is #4 on the master branch
+
+>Update to web repo will trigger master on gatsby/master Success is job #5

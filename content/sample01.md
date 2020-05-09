@@ -48,3 +48,5 @@ tags: ["example"]
 > Check to see if content pull from upstream  - look for build # 23
 
 >Ok.  The text should show up on the CDN and the smoke job is #4.
+
+>Look for a upstream project trigger here job is #4 on the master branch

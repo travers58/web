@@ -1,8 +1,8 @@
 ---
 path: "/content/sample02/"
-date: "2016-11-07"
+date: "2020-5-09"
 title: "Sample 2"
 tags: ["example"]
 ---
 
-Sample content.
+New content to trigger webhook for smoke test.

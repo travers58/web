@@ -2,7 +2,13 @@ pipeline {
    agent any
    // triggers { pollSCM('H/15 * * * *')
    //     }
-   properties([pipelineTriggers([githubPush()])])
+
+   // properties([pipelineTriggers([githubPush()])])
+
+
+   options([pipelineTriggers([githubPush()])])
+
+
    // Work
    stages {
      stage('Checkout') {

@@ -9,7 +9,7 @@ pipeline {
    stages {
      stage('Checkout') {
       steps {
-          build(job: "gatsby/master", 
+          build(job: "build/master", 
           propagate: false, 
           wait: false,
            )

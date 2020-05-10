@@ -34,27 +34,5 @@ tags: ["example"]
 </Directory>
 ```
 
-> Testing the downstream jenkins job.
+> Testing the upstream jenkins job.
 
-> test2
-
-> The third test is always the best test.
-
-> Now is the acid test.
-
-
-> here we go again the item should bind to changes made on build #10
-
-> Check to see if content pull from upstream  - look for build # 23
-
->Ok.  The text should show up on the CDN and the smoke job is #4.
-
->Look for a upstream project trigger here job is #4 on the master branch
-
->Update to web repo will trigger master on gatsby/master Success is job #5
-
-> Look for job seven here
-> 
-> Git web hook.
-> 
-> Let's try again.

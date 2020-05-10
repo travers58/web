@@ -3,11 +3,11 @@ pipeline {
    // triggers { pollSCM('H/15 * * * *')
    //     }
 
-   // properties([pipelineTriggers([githubPush()])])
-
-
-   options([pipelineTriggers([githubPush()])])
-
+   properties([
+    pipelineTriggers([
+      githubPush()
+      ])
+    ])
 
    // Work
    stages {

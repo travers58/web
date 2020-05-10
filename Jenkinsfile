@@ -1,7 +1,5 @@
 pipeline {
    agent any
-   // triggers { pollSCM('H/15 * * * *')
-   //     }
 
    triggers {
         githubPush()
@@ -11,7 +9,7 @@ pipeline {
    stages {
      stage('Checkout') {
       steps {
-          build(job: "gatsby/smoke", 
+          build(job: "gatsby/master", 
           propagate: false, 
           wait: false,
            )

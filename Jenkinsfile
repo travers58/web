@@ -2,6 +2,8 @@ pipeline {
    agent any
    // triggers { pollSCM('H/15 * * * *')
    //     }
+   properties([pipelineTriggers([githubPush()])])
+   // Work
    stages {
      stage('Checkout') {
       steps {

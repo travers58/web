@@ -8,5 +8,5 @@ tags: ["example"]
 #### Here is the first page
 
 
-> Testing the upstream jenkins job.
+> Test the git trigger
 

@@ -1,5 +1,6 @@
 pipeline {
   agent any
+  withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
   triggers {
     GenericTrigger(
      genericVariables: [
@@ -8,7 +9,7 @@ pipeline {
 
      causeString: 'Triggered on $ref',
 
-     token: 'abc123',
+     token: webhook,
 
      printContributedVariables: true,
      printPostContent: true,
@@ -18,8 +19,9 @@ pipeline {
      regexpFilterText: '',
      regexpFilterExpression: ''
     )
-    }
-    stages {
+   }
+  }
+  stages {
      stage('Checkout') {
       steps {
           build(job: "gatsby-build/smoke", 
@@ -29,4 +31,4 @@ pipeline {
        }
      } 
    }
-}
+ }

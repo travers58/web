@@ -9,7 +9,7 @@ node {
 
      causeString: 'Triggered on $ref',
 
-     token: webhook,
+     token: 'webhook',
 
      printContributedVariables: true,
      printPostContent: true,

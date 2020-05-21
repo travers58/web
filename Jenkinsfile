@@ -20,9 +20,10 @@ pipeline {
 
      regexpFilterText: '',
      regexpFilterExpression: ''
-     ]
+        ]
+      ])
     ])
-   ]}
+   }
   }
   stages {
      stage('Checkout') {

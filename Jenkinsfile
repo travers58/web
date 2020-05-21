@@ -2,8 +2,8 @@ node {
  withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
  properties([
   pipelineTriggers([
-   [$class: 'GenericTrigger',
-     genericVariables:,
+   [$class: GenericTrigger(
+     genericVariables: [
       [key: 'ref', value: '$.ref']
      ],
 

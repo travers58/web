@@ -1,7 +1,7 @@
 pipeline {
   agent any
-  withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
   triggers {
+   withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
     GenericTrigger(
      genericVariables: [
       [key: 'ref', value: '$.ref']

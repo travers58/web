@@ -12,6 +12,14 @@ tags: ["example"]
 > 
 > Second test
 > 
+<<<<<<< HEAD
 > Third test.
 
 Back on master.
+=======
+> THird test
+
+Fouth test.
+
+Back on smoke.
+>>>>>>> smoke

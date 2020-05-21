@@ -4,34 +4,35 @@ withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
   pipelineTriggers([
    [$class: 'GenericTrigger',
 
-    causeString: 'Triggered on $ref',
+          genericVariables: [
+            [key: 'ref', value: '$.ref'],
 
-    genericVariables: [
-      [key: 'ref', value: '$.ref']
-     ],
+          [
+            key: 'before',
+            value: '$.before',
+            expressionType: 'JSONPath', //Optional, defaults to JSONPath
+            regexpFilter: '', //Optional, defaults to empty string
+            defaultValue: '' //Optional, defaults to empty string
+           ]
+          ],
 
-    [
-      key: 'before',
-      value: '$.before',
-      expressionType: 'JSONPath', //Optional, defaults to JSONPath
-      regexpFilter: '', //Optional, defaults to empty string
-      defaultValue: '' //Optional, defaults to empty string
-     ]
-    ],
-    genericRequestVariables: [
-     [key: 'requestWithNumber', regexpFilter: '[^0-9]'],
-     [key: 'requestWithString', regexpFilter: '']
-    ],
-    genericHeaderVariables: [
-     [key: 'headerWithNumber', regexpFilter: '[^0-9]'],
-     [key: 'headerWithString', regexpFilter: '']
-    ], 
+          genericRequestVariables: [
+           [key: 'requestWithNumber', regexpFilter: '[^0-9]'],
+           [key: 'requestWithString', regexpFilter: '']
+          ],
 
-    token: webhook,
-   ]
-  ])
- ])
-}
+          genericHeaderVariables: [
+           [key: 'headerWithNumber', regexpFilter: '[^0-9]'],
+           [key: 'headerWithString', regexpFilter: '']
+          ], 
+
+          causeString: 'Triggered on $ref',
+
+          token: webhook,
+        ]
+     ])
+   ])
+  }
 }
 
 pipeline {

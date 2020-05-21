@@ -1,15 +1,17 @@
-node {
- withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
- properties([
-  pipelineTriggers(
-   [$class: GenericTrigger(
+pipeline {
+  agent any
+  parameters {
+  withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
+  }  
+  triggers {
+    GenericTrigger(
      genericVariables: [
       [key: 'ref', value: '$.ref']
      ],
 
      causeString: 'Triggered on $ref',
 
-     token: 'webhook',
+     token: webhook,
 
      printContributedVariables: true,
      printPostContent: true,
@@ -18,15 +20,8 @@ node {
 
      regexpFilterText: '',
      regexpFilterExpression: ''
-   )
-   ])
-  ])
-  }
-}
-
-
-pipeline {
-  agent any
+    )
+    }
     stages {
      stage('Checkout') {
       steps {

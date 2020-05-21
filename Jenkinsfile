@@ -1,8 +1,7 @@
 pipeline {
   agent any
   parameters {
-  withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
-  }  
+  withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')])
   triggers {
     GenericTrigger(
      genericVariables: [
@@ -21,6 +20,7 @@ pipeline {
      regexpFilterText: '',
      regexpFilterExpression: ''
     )
+       }
     }
     stages {
      stage('Checkout') {
@@ -28,8 +28,8 @@ pipeline {
           build(job: "gatsby-build/smoke", 
           propagate: false, 
           wait: false,
-           )
+          )
        }
      } 
-   }
+  }
 }

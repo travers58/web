@@ -1,8 +1,10 @@
 pipeline {
   agent any
-  triggers {
-   withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
-    GenericTrigger(
+  withCredentials([string(credentialsId: 'webhook-token', variable: 'webhook')]) {
+   properties([
+    pipelineTriggers([
+     [$class: 'GenericTrigger',
+
      genericVariables: [
       [key: 'ref', value: '$.ref']
      ],
@@ -18,8 +20,9 @@ pipeline {
 
      regexpFilterText: '',
      regexpFilterExpression: ''
-    )
-   }
+     ]
+    ])
+   ]}
   }
   stages {
      stage('Checkout') {

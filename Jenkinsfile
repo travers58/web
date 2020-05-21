@@ -9,7 +9,7 @@ pipeline {
 
      causeString: 'Triggered on $ref',
 
-     token: 'abc123',
+     token: 'webhook',
 
      printContributedVariables: true,
      printPostContent: true,

@@ -22,7 +22,7 @@ pipeline {
     stages {
      stage('Checkout') {
       steps {
-          build(job: "gatsby-build/master", 
+          build(job: "gatsby-build/smoke", 
           propagate: false, 
           wait: false,
            )
